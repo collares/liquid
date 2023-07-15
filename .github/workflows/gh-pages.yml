@@ -46,7 +46,7 @@ jobs:
             python3 -m pip install --upgrade pip requests wheel
             apk add pkgconfig graphviz graphviz-dev gcc musl-dev && \
             python3 -m pip install pygraphviz --global-option=build_ext --global-option="-L/usr/lib/graphviz/" --global-option="-R/usr/lib/graphviz/"
-            python3 -m pip install invoke git+https://github.com/plastex/plastex.git@ac0369937d8e011c8191484b26a1825f45481bdc git+https://github.com/PatrickMassot/leanblueprint.git
+            python3 -m pip install invoke git+https://github.com/collares/plastex.git@1d6c0be74185c923574306eef77d5e9b5e7d49bd git+https://github.com/PatrickMassot/leanblueprint.git
             inv pdf; cp print/blueprint.bbl src/web.bbl; inv qweb
             cp print/blueprint.pdf web/
 
